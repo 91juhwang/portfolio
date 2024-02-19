@@ -3,10 +3,6 @@ import { useState } from "react"
 function App() {
   const [flipped, setFlipped] = useState(false);
 
-  function handleClick() {
-    setFlipped(!flipped)
-  }
-
   return (
     <>
       {flipped ? (
@@ -17,7 +13,7 @@ function App() {
             </h2>
 
             <p className="text-white font-bold mt-6">
-              LINKEDIN
+              LINKEDIN (icon)
             </p>
             <p className="text-white font-bold">
               GITHUB
@@ -28,8 +24,11 @@ function App() {
             </p>
 
 
-            <button className="mt-6 text-black border" onClick={() => handleClick()}>
-              FIND OUT MORE
+            <button
+              className="mt-12 text-black font-bold bg-white p-2 hover:bg-gray-400 focus:-translate-y-1 hover:-translate-y-0.5"
+              onClick={() => setFlipped(!flipped)}
+            >
+              SEE MORE
             </button>
           </div>
       </div>
@@ -47,8 +46,11 @@ function App() {
               (+1) 646-942-7592
             </p>
 
-            <button className="mt-12 text-black border" onClick={() => handleClick()}>
-              FIND OUT MORE
+            <button
+              className="mt-12 text-white font-bold bg-black p-2 focus:-translate-y-1 hover:bg-gray-600 hover:-translate-y-0.5"
+              onClick={() => setFlipped(!flipped)}
+            >
+              SEE MORE
             </button>
           </div>
         </div>
