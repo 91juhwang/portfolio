@@ -1,29 +1,58 @@
-import Card from './components/Card'
+import { useState } from "react"
 
 function App() {
+  const [flipped, setFlipped] = useState(false);
+
+  function handleClick() {
+    setFlipped(!flipped)
+  }
 
   return (
     <>
-      <div className='flex h-screen items-center justify-center'>
-        <Card>
-          <div className="px-6 py-4">
-            <h2 className="text-3xl font-bold mb-2">
+      {flipped ? (
+        <div className={`flex h-screen items-center justify-center transition bg-black duration-1000`}>
+          <div className="text-center">
+            <h2 className={`text-4xl font-bold mb-2 text-white duration-800 ease-in`}>
               JAMES HWANG
             </h2>
-            <p className="text-gray-700 text-base">
+
+            <p className="text-white font-bold mt-6">
+              LINKEDIN
+            </p>
+            <p className="text-white font-bold">
+              GITHUB
+            </p>
+
+            <p className="text-white font-bold mt-4">
+              RESUME
+            </p>
+
+
+            <button className="mt-6 text-black border" onClick={() => handleClick()}>
+              FIND OUT MORE
+            </button>
+          </div>
+      </div>
+      ) : (
+        <div className={`flex h-screen items-center justify-center transition bg-white duration-1000`}>
+          <div className="text-center">
+            <h2 className={`text-4xl font-bold mb-2 text-black duration-800 ease-in`}>
+              JAMES HWANG
+            </h2>
+
+            <p className="text-black font-bold mt-6 ">
+              91JUHWANG@GMAIL.COM
+            </p>
+            <p className="text-black font-bold">
               (+1) 646-942-7592
             </p>
-            <p className="text-gray-700 text-base">
-              91juhwang@gmail.com
-            </p>
+
+            <button className="mt-12 text-black border" onClick={() => handleClick()}>
+              FIND OUT MORE
+            </button>
           </div>
-          <div className="px-6 pt-4 pb-2">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-          </div>
-        </Card>
-      </div>
+        </div>
+      )}
     </>
   )
 }
