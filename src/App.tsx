@@ -1,8 +1,6 @@
 import { useState } from "react";
 // import { linkedinIcon } from './icons'
 
-import Icon from './components/Icon';
-
 function App() {
   const [pageDark, setPageDark] = useState(false);
 

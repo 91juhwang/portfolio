@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react"
-
 type IconProps = {
   fill: string;
   width: string;
