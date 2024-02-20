@@ -67,6 +67,10 @@ function App() {
               JAMES HWANG
             </h2>
 
+            <p className="text-black font-bold mt-1">
+              Software Engineer
+            </p>
+
             <p className="text-black font-bold mt-6 ">
               91JUHWANG@GMAIL.COM
             </p>
